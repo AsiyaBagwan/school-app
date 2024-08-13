@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School App Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
+<body>
+<header>
+<div class="header-content">
+<h2 class="header-title">Dashboard</h2>
+</div>
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact Us</a>
+<a href="login.html">Login/Sign Up</a>
+</nav>
+</header>
+<div class="container">
+<div class="sidebar">
+<div class="sidebar-header">
+<h3>Menu</h3>
+</div>
+<div class="sidebar-menu">
+<a href="studRegistration.html">
+<button><i class="fas fa-user-plus"
+onclick={}
+></i> Add Student</button>
+</a>
+<a href="studentList.html">
+<button><i class="fas fa-list"></i> Student List</button>
+</a>
+<a href="TeacherRegistration.html">
+<button><i class="fas fa-chalkboard-teacher"></i> Add Teacher</button>
+</a>
+<a href="teacherList.html">
+<button><i class="fas fa-users"></i> Teacher List</button>
+</a>
+<div class="chatbot">
+<p>Chatbot</p>
+<a href="chatbot.html" class="chatbot-btn"><i class="fas fa-comment-alt"></i> Start Chat</a>
+</div>
+</div>
+</div>
+<div class="content">
+<h1 class="welcome-message">Welcome to the Apna School</h1>
+<div class="card">
+<div class="card-content">
+<h2>Information for Staff, Parents, and Students</h2>
+<p>A school website provides essential information for staff, parents, and students, including academic calendars, upcoming activities, test schedules, fees, and school news. It's imperative for the website to be user-friendly, regularly updated, and comprehensive to maintain a reputable image for the school.</p>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer-content">
+<div class="footer-left">
+<h3>School App</h3>
+<p>A platform for managing students and teachers efficiently.</p>
+<ul class="social-links">
+<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+<div class="footer-right">
+<h3>Contact Us</h3>
+<ul class="contact-info">
+<li><i class="fas fa-map-marker-alt"></i> 123 School Street, Cityville, Country</li>
+<li><i class="fas fa-phone"></i> +123 456 7890</li>
+<li><i class="fas fa-envelope"></i> info@schoolapp.com</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 School App. All rights reserved.</p>
+</div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+css
+
+/* Reset and general styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Default font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #f0f0f0; /* Light gray background */
+    background-image: url('https://www.shutterstock.com/image-photo/group-kids-holding-school-books-260nw-164111603.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* No repeat for background image */
+    background-position: center; /* Center the background image */
+    height: 80vh;
+}
+
+header {
+    background-color: #4A235A; /* Light gray header background */
+    color: #4A235A; /* Dark purple text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header nav {
+    margin-left: auto; /* Push navigation to the right */
+}
+
+header a {
+    text-decoration: none;
+    color: #fefbff; /* Dark purple text color */
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4A235A; /* Dark purple sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    height: 100vh; /* Full viewport height for sidebar */
+    color: white; /* White text color for sidebar */
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+}
+
+.sidebar-menu {
+    width: 250px;
+            background-color: #4A235A; /* Sidebar color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            height: 90vh;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+            color: #4A235A; /* Sidebar color */
+            margin: 10px 0;
+            text-align: center;
+            width: 80%;
+            display: flex;
+            align-items: center;
+}
+
+.sidebar-menu button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: white; /* White background for buttons */
+    border: 2px solid #fdfcfd; /* Sidebar color border */
+    border-radius: 24px;
+    color: #4A235A; /* Sidebar color text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+
+.sidebar-menu button:hover {
+    background-color:#4A235A; /* Sidebar color on hover */
+            color: white; /* White text on hover */
+}
+
+.sidebar-menu i {
+    margin-right: 10px; /* Add spacing between icon and text */
+}
+
+.chatbot {
+    margin-top: auto; /* Push chatbot to bottom of sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.chatbot p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.chatbot-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #fcfbfb; /* Dark gray button background */
+    border: none;
+    color: white; /* White text color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.chatbot-btn:hover {
+    background-color: #575757; /* Darker shade on hover */
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content p {
+    font-family: 'Montserrat', sans-serif; /* Change font family */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #343a40; /* Dark background color for footer */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding at the top and bottom */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.footer-left h3, .footer-right h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4A235A; /* Purple color on hover */
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Add this to your existing styles.css */
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-content {
+    text-align: left;
+}
+
+.card-content h2 {
+    color: #1D3557;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.welcome-message
+{
+   margin-left: 30%; 
+}
+
+
